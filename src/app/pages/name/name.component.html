@@ -1,0 +1,22 @@
+<input type="text" #txtCountry placeholder="Buscar pais" (keyup)="search(txtCountry.value)"
+class="form-control">
+
+<div class="mt-2">
+
+    <table class="table">
+        <thead class="">
+            <tr>
+                <th>Nombre</th>
+                <th>Capital</th>
+                <th>Poblacion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr  *ngFor="let country of countries">
+                <td>{{country.name}}</td>
+                <td>{{country.capital}}</td>
+                <td>{{country.population}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
